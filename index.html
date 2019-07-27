@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // Have each button change the color of the heading
+                document.querySelectorAll('.color-change').forEach(function(button) {
+                    button.onclick = function() {
+                        document.querySelector('#hello').style.color = button.dataset.color;
+                    };
+                });
+
+            });
+        </script>
+        <style>
+            .image
+            {
+             background-image: url(image/ca.jpg);
+            }
+            h1{
+                font-size: 80px;
+                font-weight: bold;
+
+
+            }
+            button{
+                width: 120px;
+                height: 100px;
+                font-size: 30px;
+                margin-left: 10px;
+                margin-right: 10px;
+                border: 1.5px solid black;
+                
+            }
+            .row2{
+                margin-top: 35px;
+                margin-left: 400px;
+            }
+            .row1{
+                margin-top: 40px;
+            }
+        </style>
+        <title>My Website</title>
+    </head>
+    <body class="image">
+        <center><h1 id="hello">LEARN COLORS!</h1></center>
+        <div class="row1">
+        <button class="color-change" data-color="#f53520" style="margin-left: 270px;">Red</button>
+        <button class="color-change" data-color="#0a2cf0">Blue</button>
+        <button class="color-change" data-color="#3cfa02">Green</button>
+        <button class="color-change" data-color="#fc05c3">Pink</button>
+        <button class="color-change" data-color="#faf202">Yellow</button>
+        <button class="color-change" data-color="black">Black</button>
+        </div>
+
+        <div class="row2">
+        <button class="color-change" data-color="grey">Grey</button>
+         <button class="color-change" data-color="#844a30">Brown</button>
+        <button class="color-change" data-color="#7b27b8">Purple</button>
+        <button class="color-change" data-color="#ff8e01">Orange</button>
+        </div>
+    </body>
+</html>
